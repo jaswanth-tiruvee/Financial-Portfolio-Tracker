@@ -1,0 +1,32 @@
+{
+  "name": "financial-portfolio-tracker",
+  "version": "1.0.0",
+  "description": "Crypto/Stock Portfolio Tracker with API Integration and Event-Driven Background Processing",
+  "main": "index.js",
+  "scripts": {
+    "start:api": "node api-server/index.js",
+    "start:worker": "node worker-service/index.js",
+    "dev:api": "nodemon api-server/index.js",
+    "dev:worker": "nodemon worker-service/index.js",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:worker\""
+  },
+  "keywords": ["portfolio", "crypto", "stocks", "redis", "bull", "cron"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.2",
+    "redis": "^4.6.11",
+    "bull": "^4.12.0",
+    "node-cron": "^3.0.3",
+    "mongoose": "^8.0.3",
+    "dotenv": "^16.3.1",
+    "cors": "^2.8.5",
+    "express-validator": "^7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2"
+  }
+}
+
